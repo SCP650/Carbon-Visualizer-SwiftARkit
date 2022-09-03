@@ -7,30 +7,51 @@
 
 import SwiftUI
 import RealityKit
+import ARKit
 
 struct ContentView : View {
+    @State private var placeObject = false
     var body: some View {
-        return ARViewContainer().edgesIgnoringSafeArea(.all)
+        ZStack{ ARViewContainer(triggerObject:self.$placeObject).edgesIgnoringSafeArea(.all)
+            Button("Visualize"){
+                placeObject = !placeObject
+            }
+        }
     }
 }
 
 struct ARViewContainer: UIViewRepresentable {
+    @Binding var triggerObject: Bool
     
     func makeUIView(context: Context) -> ARView {
-        
         let arView = ARView(frame: .zero)
-        
-        // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
-        
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
-        
+        let config = ARWorldTrackingConfiguration()
+        config.planeDetection = [.horizontal]
+        config.environmentTexturing = .automatic
+        if(ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh)){
+            config.sceneReconstruction = .mesh
+        }
+        arView.session.run(config)
         return arView
         
     }
     
-    func updateUIView(_ uiView: ARView, context: Context) {}
+    func updateUIView(_ uiView: ARView, context: Context) {
+        if(self.triggerObject){
+            let boxModelEntity = createBoxModelEntity()
+            let anchorEntity = AnchorEntity(plane: .horizontal)
+            anchorEntity.addChild(boxModelEntity)
+            uiView.scene.addAnchor(anchorEntity)
+        }else{
+            uiView.scene.anchors.removeAll()
+        }
+    }
+    
+    func createBoxModelEntity() -> ModelEntity {
+        let boxResource = MeshResource.generateBox(size: 1)
+        let myMaterial = SimpleMaterial(color: .blue, roughness: 0.5, isMetallic: true)
+        return ModelEntity(mesh: boxResource, materials: [myMaterial])
+    }
     
 }
 

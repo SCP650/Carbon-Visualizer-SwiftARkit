@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6F24EE1928C3024C0018E59B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F24EE1828C3024C0018E59B /* AppDelegate.swift */; };
 		6F24EE1B28C3024C0018E59B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F24EE1A28C3024C0018E59B /* ContentView.swift */; };
-		6F24EE1D28C3024C0018E59B /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 6F24EE1C28C3024C0018E59B /* Experience.rcproject */; };
 		6F24EE1F28C302540018E59B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F24EE1E28C302540018E59B /* Assets.xcassets */; };
 		6F24EE2228C302540018E59B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F24EE2128C302540018E59B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		6F24EE1528C3024C0018E59B /* CarbonVisualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarbonVisualizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F24EE1828C3024C0018E59B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F24EE1A28C3024C0018E59B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6F24EE1C28C3024C0018E59B /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		6F24EE1E28C302540018E59B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F24EE2128C302540018E59B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,7 +53,6 @@
 			children = (
 				6F24EE1828C3024C0018E59B /* AppDelegate.swift */,
 				6F24EE1A28C3024C0018E59B /* ContentView.swift */,
-				6F24EE1C28C3024C0018E59B /* Experience.rcproject */,
 				6F24EE1E28C302540018E59B /* Assets.xcassets */,
 				6F24EE2028C302540018E59B /* Preview Content */,
 			);
@@ -142,7 +139,6 @@
 			files = (
 				6F24EE1B28C3024C0018E59B /* ContentView.swift in Sources */,
 				6F24EE1928C3024C0018E59B /* AppDelegate.swift in Sources */,
-				6F24EE1D28C3024C0018E59B /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
