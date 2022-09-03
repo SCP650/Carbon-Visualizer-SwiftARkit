@@ -12,17 +12,27 @@ import FocusEntity
 
 struct ContentView : View {
     @State private var placeObject = false
+    @State private var kgOfCo2 : Float = 24.48
     var body: some View {
-        VStack{ ARViewContainer(triggerObject:self.$placeObject).edgesIgnoringSafeArea(.all)
-            Button(placeObject ? "Reset":"Visualize"){
-                placeObject = !placeObject
+        VStack{ ARViewContainer(triggerObject:self.$placeObject, kgOfCo2: self.$kgOfCo2).edgesIgnoringSafeArea(.all)
+            HStack{
+                Button(placeObject ? "Reset":"Visualize"){
+                    placeObject = !placeObject
+                }
+                TextField("Kg of Co2", value: self.$kgOfCo2, formatter: NumberFormatter())
             }
+       
         }
     }
 }
 
 struct ARViewContainer: UIViewRepresentable {
     @Binding var triggerObject: Bool
+    @Binding var kgOfCo2: Float
+    let boxResource = MeshResource.generateBox(size: 1)
+    let myMaterial = SimpleMaterial(color: SimpleMaterial.Color(_colorLiteralRed: 255, green: 249, blue: 166, alpha: 0.7), roughness: 0.5, isMetallic: false)
+    let directions = [SIMD3(Float(1),-2,0),SIMD3(Float(-1),-2,0),SIMD3(Float(0),-2,1.0)];
+    //move left, move right, move forward
     
     func makeUIView(context: Context) -> CustomARView {
         let arView = CustomARView(frame: .zero)//ARView(frame: .zero)
@@ -32,9 +42,34 @@ struct ARViewContainer: UIViewRepresentable {
     
     func updateUIView(_ uiView: CustomARView, context: Context) {
         if(self.triggerObject){
-            let boxModelEntity = createBoxModelEntity()
             let anchorEntity = AnchorEntity(plane: .horizontal)
-            anchorEntity.addChild(boxModelEntity)
+            let volumn = kgOfCo2 / 1.836 //volumns in cube meters
+            var directionIndex = 0//index directions
+            var preModelEntity : ModelEntity? = nil
+            for i in 1...Int(ceil(volumn)){
+                let boxModelEntity : ModelEntity
+                if(Float(i) < volumn){
+                    //not the last one
+                    boxModelEntity = createBoxModelEntity()
+                }else{
+                    //the last one
+                    boxModelEntity = createBoxModelEntity(height: volumn - Float(i-1))
+                }
+                if(preModelEntity != nil){
+                    if((i-1)%3 != 0){
+                        boxModelEntity.setPosition(SIMD3(0,1,0), relativeTo: preModelEntity)
+                    }else{
+                        boxModelEntity.setPosition(self.directions[directionIndex], relativeTo: preModelEntity)
+                        directionIndex += 1
+                        if(directionIndex>=directions.count){
+                            directionIndex = 0
+                        }
+                    }
+                    
+                }
+                preModelEntity = boxModelEntity
+                anchorEntity.addChild(boxModelEntity)
+            }
             uiView.scene.addAnchor(anchorEntity)
             uiView.HideFocusEntity()
         }else{
@@ -43,10 +78,14 @@ struct ARViewContainer: UIViewRepresentable {
         }
     }
     
-    func createBoxModelEntity() -> ModelEntity {
-        let boxResource = MeshResource.generateBox(size: 1)
-        let myMaterial = SimpleMaterial(color: .blue, roughness: 0.5, isMetallic: true)
-        return ModelEntity(mesh: boxResource, materials: [myMaterial])
+    func createBoxModelEntity(height: Float = -1) -> ModelEntity {
+        if(height < 0){
+            return ModelEntity(mesh: boxResource, materials: [myMaterial])
+        }else{
+            let newBox = MeshResource.generateBox(size: SIMD3(x: 1, y: height, z: 1))
+            return ModelEntity(mesh: newBox, materials: [myMaterial])
+        }
+        
     }
     
 }
