@@ -9,10 +9,33 @@ import SwiftUI
 
 
 struct ContentView : View {
-
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
-        VisualizerView()
+        switch viewRouter.currentPage{
+        case .home:
+            HomeView()
+        case .visualize:
+            VisualizerView()
+        case .calculate:
+            CalculatorView()
+        }
     }
+}
+
+class ViewRouter: ObservableObject {
+    @Published var currentPage: Page = .home
+    
+    func reset() {
+        self.currentPage = .home
+    }
+}
+
+enum Page {
+    case home
+    case calculate
+    case visualize
+
 }
 
 #if DEBUG
