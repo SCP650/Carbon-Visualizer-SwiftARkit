@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct CalculatorView: View {
+    @ObservedObject var viewModel = CalculatorViewModel()
     @State var username: String = ""
       @State var isPrivate: Bool = true
-      @State var notificationsEnabled: Bool = false
       @State private var previewIndex = 0
-      var previewOptions = ["Always", "When Unlocked", "Never"]
     
     @State private var showingPopover = false
     
+    func hideKeyboard() {
+          UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+      }
+    
     var body: some View {
         Form {
-            
            Section() {
                HStack{
-                   TextField("Username", text: $username)
+                   TextField("Username", text: $viewModel.naturalGasVal).keyboardType(.decimalPad).onTapGesture {
+                       self.hideKeyboard()
+                    }
                    Button(action: {showingPopover = true}) {
                        Image(systemName: "info.circle")
     
@@ -33,8 +37,9 @@ struct CalculatorView: View {
                          Text("Natural Gas Assumption")
                      }
                }
-               Toggle(isOn: $isPrivate) {
-                   Text("Private Account")
+               Picker("Unit", selection: $viewModel.gasUnit) {
+                   Text(gasUnits.dollars.rawValue).tag(gasUnits.dollars)
+                   Text(gasUnits.cubeFeet.rawValue).tag(gasUnits.cubeFeet)
                }
            } header : {
                Text("Natural Gas")
@@ -42,17 +47,7 @@ struct CalculatorView: View {
             footer : {
                Text("Explain Home Energy")
            }
-           
-            Section(header: Text("NOTIFICATIONS"), footer: Text("Explain Home Energy")) {
-               Toggle(isOn: $notificationsEnabled) {
-                   Text("Enabled")
-               }
-               Picker(selection: $previewIndex, label: Text("Show Previews")) {
-                   ForEach(0 ..< previewOptions.count) {
-                       Text(self.previewOptions[$0])
-                   }
-               }
-           }
+        
            
            Section(header: Text("ABOUT")) {
                HStack {

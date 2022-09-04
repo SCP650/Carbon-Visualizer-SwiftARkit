@@ -18,6 +18,7 @@
 		6FC83AFB28C4615200ACCC8A /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC83AFA28C4615200ACCC8A /* CalculatorView.swift */; };
 		6FC83AFF28C4664600ACCC8A /* LearnMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC83AFE28C4664600ACCC8A /* LearnMoreView.swift */; };
 		6FDAF4F028C50B15003D73D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FDAF4F228C50B15003D73D4 /* Localizable.strings */; };
+		6FDAF4F928C51D93003D73D4 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDAF4F828C51D93003D73D4 /* CalculatorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		6FDAF4F328C50B17003D73D4 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6FDAF4F428C50B18003D73D4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6FDAF4F528C50B19003D73D4 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6FDAF4F828C51D93003D73D4 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		6F24EE1728C3024C0018E59B /* CarbonVisualizer */ = {
 			isa = PBXGroup;
 			children = (
+				6FDAF4F728C51D83003D73D4 /* ViewModels */,
 				6F24EE1828C3024C0018E59B /* AppDelegate.swift */,
 				6FC83AF328C45B5F00ACCC8A /* Views */,
 				6F24EE1E28C302540018E59B /* Assets.xcassets */,
@@ -104,6 +107,14 @@
 				6FC83AFA28C4615200ACCC8A /* CalculatorView.swift */,
 			);
 			path = CalculatorViews;
+			sourceTree = "<group>";
+		};
+		6FDAF4F728C51D83003D73D4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6FDAF4F828C51D93003D73D4 /* CalculatorViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 			files = (
 				6FC83AF728C4601100ACCC8A /* VisualizerView.swift in Sources */,
 				6F24EE1B28C3024C0018E59B /* ContentView.swift in Sources */,
+				6FDAF4F928C51D93003D73D4 /* CalculatorViewModel.swift in Sources */,
 				6FC83AFF28C4664600ACCC8A /* LearnMoreView.swift in Sources */,
 				6F24EE1928C3024C0018E59B /* AppDelegate.swift in Sources */,
 				6FC83AF928C4613300ACCC8A /* HomeView.swift in Sources */,
