@@ -17,6 +17,7 @@
 		6FC83AF928C4613300ACCC8A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC83AF828C4613300ACCC8A /* HomeView.swift */; };
 		6FC83AFB28C4615200ACCC8A /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC83AFA28C4615200ACCC8A /* CalculatorView.swift */; };
 		6FC83AFF28C4664600ACCC8A /* LearnMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC83AFE28C4664600ACCC8A /* LearnMoreView.swift */; };
+		6FDAF4F028C50B15003D73D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FDAF4F228C50B15003D73D4 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,10 @@
 		6FC83AF828C4613300ACCC8A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6FC83AFA28C4615200ACCC8A /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		6FC83AFE28C4664600ACCC8A /* LearnMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreView.swift; sourceTree = "<group>"; };
+		6FDAF4F128C50B15003D73D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6FDAF4F328C50B17003D73D4 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6FDAF4F428C50B18003D73D4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6FDAF4F528C50B19003D73D4 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 		6F24EE0C28C3024B0018E59B = {
 			isa = PBXGroup;
 			children = (
+				6FDAF4F228C50B15003D73D4 /* Localizable.strings */,
 				6F24EE1728C3024C0018E59B /* CarbonVisualizer */,
 				6F24EE1628C3024C0018E59B /* Products */,
 			);
@@ -137,6 +143,9 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
+				"zh-HK",
 			);
 			mainGroup = 6F24EE0C28C3024B0018E59B;
 			packageReferences = (
@@ -157,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F24EE2228C302540018E59B /* Preview Assets.xcassets in Resources */,
+				6FDAF4F028C50B15003D73D4 /* Localizable.strings in Resources */,
 				6F24EE1F28C302540018E59B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +189,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6FDAF4F228C50B15003D73D4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FDAF4F128C50B15003D73D4 /* en */,
+				6FDAF4F328C50B17003D73D4 /* zh-HK */,
+				6FDAF4F428C50B18003D73D4 /* zh-Hans */,
+				6FDAF4F528C50B19003D73D4 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6F24EE2328C302540018E59B /* Debug */ = {

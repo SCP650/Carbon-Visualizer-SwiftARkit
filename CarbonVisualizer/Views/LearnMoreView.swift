@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LearnMoreView: View {
     var body: some View {
-        Text("Learn more here!! World!")
+        Text(LocalizedStringKey("test"))
     }
 }
 
