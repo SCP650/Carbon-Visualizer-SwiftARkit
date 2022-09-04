@@ -1,30 +1,15 @@
 //
-//  ContentView.swift
+//  ARCustomView.swift
 //  CarbonVisualizer
 //
-//  Created by Atlas on 9/2/22.
+//  Created by Atlas on 9/3/22.
 //
 
 import SwiftUI
+import Foundation
 import RealityKit
 import ARKit
 import FocusEntity
-
-struct ContentView : View {
-    @State private var placeObject = false
-    @State private var kgOfCo2 : Float = 24.48
-    var body: some View {
-        VStack{ ARViewContainer(triggerObject:self.$placeObject, kgOfCo2: self.$kgOfCo2).edgesIgnoringSafeArea(.all)
-            HStack{
-                Button(placeObject ? "Reset":"Visualize"){
-                    placeObject = !placeObject
-                }
-                TextField("Kg of Co2", value: self.$kgOfCo2, formatter: NumberFormatter())
-            }
-       
-        }
-    }
-}
 
 struct ARViewContainer: UIViewRepresentable {
     @Binding var triggerObject: Bool
@@ -53,7 +38,11 @@ struct ARViewContainer: UIViewRepresentable {
                     boxModelEntity = createBoxModelEntity()
                 }else{
                     //the last one
-                    boxModelEntity = createBoxModelEntity(height: volumn - Float(i-1))
+                    let height = volumn - Float(i-1)
+                    boxModelEntity = createBoxModelEntity(height: height)
+                    boxModelEntity.setPosition(SIMD3(0,0.5+height/2,0), relativeTo: preModelEntity)
+                    anchorEntity.addChild(boxModelEntity)
+                    break
                 }
                 if(preModelEntity != nil){
                     if((i-1)%3 != 0){
@@ -120,11 +109,3 @@ class CustomARView:ARView{
        fatalError("init(coder:) has not been implemented")
      }
 }
-
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-#endif

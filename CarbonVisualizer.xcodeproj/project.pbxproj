@@ -12,6 +12,7 @@
 		6F24EE1F28C302540018E59B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F24EE1E28C302540018E59B /* Assets.xcassets */; };
 		6F24EE2228C302540018E59B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F24EE2128C302540018E59B /* Preview Assets.xcassets */; };
 		6FC83AF228C3C89E00ACCC8A /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 6FC83AF128C3C89E00ACCC8A /* FocusEntity */; };
+		6FC83AF528C45B7D00ACCC8A /* ARCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC83AF428C45B7D00ACCC8A /* ARCustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		6F24EE1A28C3024C0018E59B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6F24EE1E28C302540018E59B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F24EE2128C302540018E59B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6FC83AF428C45B7D00ACCC8A /* ARCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				6F24EE1828C3024C0018E59B /* AppDelegate.swift */,
-				6F24EE1A28C3024C0018E59B /* ContentView.swift */,
+				6FC83AF328C45B5F00ACCC8A /* Views */,
 				6F24EE1E28C302540018E59B /* Assets.xcassets */,
 				6F24EE2028C302540018E59B /* Preview Content */,
 			);
@@ -67,6 +69,15 @@
 				6F24EE2128C302540018E59B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6FC83AF328C45B5F00ACCC8A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F24EE1A28C3024C0018E59B /* ContentView.swift */,
+				6FC83AF428C45B7D00ACCC8A /* ARCustomView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 			files = (
 				6F24EE1B28C3024C0018E59B /* ContentView.swift in Sources */,
 				6F24EE1928C3024C0018E59B /* AppDelegate.swift in Sources */,
+				6FC83AF528C45B7D00ACCC8A /* ARCustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
