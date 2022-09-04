@@ -6,3 +6,8 @@
   
 */
 "test" = "This is testing! I'm in calculator";
+"Home Energy"="Home Energy";
+"Natural Gas" = "Natural Gas";
+"Explain Home Energy" = "Enter the average monthly bill for your household";
+"Explan Natural Gas" = "$23/month is about average in the United States for a household of one person.";
+"Natural Gas Assumption" = "If you enter your monthly consumption in thousands of cubic feet, you'll get a more accurate estimate. If you enter dollars, our calculations assume that you pay $10.68/thousand cubic feet.";

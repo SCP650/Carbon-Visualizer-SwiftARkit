@@ -88,14 +88,22 @@
 		6FC83AF328C45B5F00ACCC8A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6FDAF4F628C50F94003D73D4 /* CalculatorViews */,
 				6F24EE1A28C3024C0018E59B /* ContentView.swift */,
 				6FC83AF428C45B7D00ACCC8A /* ARCustomView.swift */,
 				6FC83AF628C4601100ACCC8A /* VisualizerView.swift */,
 				6FC83AF828C4613300ACCC8A /* HomeView.swift */,
-				6FC83AFA28C4615200ACCC8A /* CalculatorView.swift */,
 				6FC83AFE28C4664600ACCC8A /* LearnMoreView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6FDAF4F628C50F94003D73D4 /* CalculatorViews */ = {
+			isa = PBXGroup;
+			children = (
+				6FC83AFA28C4615200ACCC8A /* CalculatorView.swift */,
+			);
+			path = CalculatorViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

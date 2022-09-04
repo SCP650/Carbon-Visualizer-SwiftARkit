@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+//redo home view base on this https://www.youtube.com/watch?v=EBbhIbI2Hg8
 
 struct HomeView: View {
     var body: some View {
