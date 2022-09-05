@@ -18,7 +18,7 @@ struct ContentView : View {
         case .visualize:
             VisualizerView()
         case .calculate:
-            CalculatorView()
+            CalculatorView().environmentObject(viewRouter)
         }
     }
 }

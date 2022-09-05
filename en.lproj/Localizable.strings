@@ -7,7 +7,27 @@
 */
 "test" = "This is testing! I'm in calculator";
 "Home Energy"="Home Energy";
+
 "Natural Gas" = "Natural Gas";
 "Explain Home Energy" = "Enter the average monthly bill for your household";
 "Explan Natural Gas" = "$23/month is about average in the United States for a household of one person.";
 "Natural Gas Assumption" = "If you enter your monthly consumption in thousands of cubic feet, you'll get a more accurate estimate. If you enter dollars, our calculations assume that you pay $10.68/thousand cubic feet.";
+
+"Electricity" = "Electricity  ";
+"Explan Electricity" = "$44/month is about average in the United States for a household of one person.";
+"Electricity Assumption" = "If you enter your average kilowatt-hours, you'll get a more accurate estimate. If you enter dollars, our calculations assume that you pay 11.9 cents/kWh.";
+
+"Fuel Oil" = "Fuel Oil      ";
+"Explan Fuel Oil" = "$72/month is about average in the United States for a household of one person.";
+"Fuel Oil Assumption" = "If you enter your average monthly fuel oil use in gallons, you'll get a more accurate estimate. If you enter dollars, our calculations assume that you pay $4.02/gallon.";
+
+"Propane" = "Propane     ";
+"Explan Propane" = "$37/month is about average in the United States for a household of one person.";
+"Propane Assumption" = "If you enter your monthly propane use in gallons, you'll get a more accurate estimate. If you enter dollars, our calculations assume that you pay $2.47/gallon.";
+
+
+
+
+
+
+
