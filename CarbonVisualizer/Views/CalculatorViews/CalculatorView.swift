@@ -113,10 +113,10 @@ struct CalculatorView: View {
             footer : {
                Text("Explain Home Energy")
            }
-            
+            //Transportation
             Section(){
                 HStack{
-                    Text("Car Count")
+                    Text("Car Count").frame(width: 80, alignment: .leading)
                     TextField(viewModel.carCount, text: $viewModel.carCount).keyboardType(.numberPad).onTapGesture {
                         self.hideKeyboard()
                      }.multilineTextAlignment(.center)
@@ -131,7 +131,7 @@ struct CalculatorView: View {
                       }
                 }
                 HStack{
-                    Text("Miles driven")
+                    Text("Miles driven").frame(width: 80, alignment: .leading)
                     TextField(viewModel.carMiles, text: $viewModel.carMiles).keyboardType(.decimalPad).onTapGesture {
                         self.hideKeyboard()
                      }.multilineTextAlignment(.center)
@@ -146,7 +146,7 @@ struct CalculatorView: View {
                       }
                 }
                 HStack{
-                    Text("gas mileage")
+                    Text("gas mileage").frame(width: 70, alignment: .leading)
                     TextField(viewModel.carMilage, text: $viewModel.carMilage).keyboardType(.decimalPad).onTapGesture {
                         self.hideKeyboard()
                      }.multilineTextAlignment(.center)
@@ -162,14 +162,46 @@ struct CalculatorView: View {
                 }
             } header : {
                 Text("Transportation")
+            } footer:{
+                Text("Explain Transportation")
             }
             
             Section(){
-                Text(viewModel.result)
+                Text("peep count")
+                HStack{
+                    TextField(viewModel.countPeople, text: $viewModel.countPeople).keyboardType(.numberPad).onTapGesture {
+                        self.hideKeyboard()
+                    }.multilineTextAlignment(.center)
+                    Text("peep unit")
+                }
+                HStack{
+                    Text("waste unit")
+                    Text(viewModel.wasteVal).foregroundColor(Color(UIColor.placeholderText))
+                        .frame(width: 120.0, alignment: .center)
+                    Button(action: {showingWastePopover = true}) {
+                        Image(systemName: "info.circle")
+                    }
+                      .popover(isPresented: $showingWastePopover) {
+                          Text("Explan Waste")
+                              .font(.headline)
+                              .padding()
+                      }
+                }
+            }
+            
+            Section(){
+                HStack{
+                    Text(viewModel.result)
+                    Text("tons").multilineTextAlignment(.trailing)
+                }
             }header: {
-                Text("Annual CO2 emissions")
+                Text("Your Annual CO2 emissions")
             } footer:{
-                Text("Average U.S CO2 footprint is 16 ton per year. ")
+                VStack{
+                    Text("The CO2 emissions in U.S. is roughly 15 tons per person per year in 2019.")
+                    Text("The CO2 emissions in China is roughly 7.6 tons per person per year in 2019.")
+                    Text("The CO2 emissions in the world is roughly 4.5 tons per person per year in 2019. Data from worldbank.org")
+                }
             }
             
             Section {

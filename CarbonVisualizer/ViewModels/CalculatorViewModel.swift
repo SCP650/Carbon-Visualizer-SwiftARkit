@@ -21,16 +21,26 @@ class CalculatorViewModel: ObservableObject {
     @Published var propaneVal : String = "37.0"{didSet{CalcCarbon()}}
     @Published var propaneUnit : propaneUnits = propaneUnits.dollars{didSet{CalcCarbon()}}
     
-    @Published var carCount : String = "1"{didSet{CalcCarbon()}}
+    @Published var carCount : String = "1.88"{didSet{CalcCarbon()}}
     @Published var carMiles : String = "240" {didSet{CalcCarbon()}}
     @Published var carMilage : String = "21.4" {didSet{CalcCarbon()}}
+    
+    @Published var countPeople : String = "1" {didSet{CalcCarbon()}}
+    @Published var wasteVal : String = "692"
     
     @Published var result : String = "123"
     
     public func CalcCarbon(){
-        var resultF : Float = 0.0
-        resultF = (calcNaturalGas() + calcElectricity() + calcFuel() + calcPropane() + calcCars()) * 0.453592 //convert from lb to kg
+        let resultF = (calcNaturalGas() + calcElectricity() + calcFuel() + calcPropane() + calcCars() + calcWaste()) * 0.000453592 //convert from lb to ton
         result = String(round(resultF * 100) / 100.0)
+    }
+    
+    private func calcWaste() -> Float{
+        if let numPep = Int(countPeople){
+            wasteVal = String(numPep*692)
+            return Float(numPep*692)
+        }
+        return 0.0
     }
     
     private func calcCars() -> Float{
