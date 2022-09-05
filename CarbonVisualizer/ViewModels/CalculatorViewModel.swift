@@ -29,10 +29,15 @@ class CalculatorViewModel: ObservableObject {
     @Published var wasteVal : String = "692"
     
     @Published var result : String = "123"
+    @Published var resultDailyKg : String = "321"
     
     public func CalcCarbon(){
-        let resultF = (calcNaturalGas() + calcElectricity() + calcFuel() + calcPropane() + calcCars() + calcWaste()) * 0.000453592 //convert from lb to ton
+        var resultF = (calcNaturalGas() + calcElectricity() + calcFuel() + calcPropane() + calcCars() + calcWaste()) * 0.000453592 //convert from lb to ton
+        if let countF = Float(countPeople){
+            resultF /= countF //convert household to individual
+        }
         result = String(round(resultF * 100) / 100.0)
+        resultDailyKg = String(round((resultF/365.0) * 100000) / 100.0)
     }
     
     private func calcWaste() -> Float{

@@ -18,6 +18,7 @@ struct CalculatorView: View {
     @State private var showingMilesPopover = false
     @State private var showingMileagePopover = false
     @State private var showingWastePopover = false
+    @State private var showingResultPopover = false
     
     
     func hideKeyboard() {
@@ -26,6 +27,19 @@ struct CalculatorView: View {
     
     var body: some View {
         Form {
+            Section(){
+       
+                HStack{
+                    TextField(viewModel.countPeople, text: $viewModel.countPeople).keyboardType(.numberPad).onTapGesture {
+                        self.hideKeyboard()
+                    }.multilineTextAlignment(.center)
+                    Text("peep unit")
+                }
+            } header:{
+                Text("peep size")
+            } footer:{
+                Text("peep count")
+            }
            Section() {
                //Natural Gas
                HStack{
@@ -167,17 +181,11 @@ struct CalculatorView: View {
             }
             
             Section(){
-                Text("peep count")
-                HStack{
-                    TextField(viewModel.countPeople, text: $viewModel.countPeople).keyboardType(.numberPad).onTapGesture {
-                        self.hideKeyboard()
-                    }.multilineTextAlignment(.center)
-                    Text("peep unit")
-                }
                 HStack{
                     Text("waste unit")
+                    Spacer()
                     Text(viewModel.wasteVal).foregroundColor(Color(UIColor.placeholderText))
-                        .frame(width: 120.0, alignment: .center)
+                    Spacer()
                     Button(action: {showingWastePopover = true}) {
                         Image(systemName: "info.circle")
                     }
@@ -192,23 +200,27 @@ struct CalculatorView: View {
             Section(){
                 HStack{
                     Text(viewModel.result)
-                    Text("tons").multilineTextAlignment(.trailing)
+                    Text("tons")
+                    Spacer()
+                    Button(action: {showingResultPopover = true}) {
+                        Image(systemName: "info.circle")
+                    }
+                      .popover(isPresented: $showingResultPopover) {
+                          Text("Explan Result")
+                              .padding()
+                      }
                 }
             }header: {
                 Text("Your Annual CO2 emissions")
             } footer:{
-                VStack{
-                    Text("The CO2 emissions in U.S. is roughly 15 tons per person per year in 2019.")
-                    Text("The CO2 emissions in China is roughly 7.6 tons per person per year in 2019.")
-                    Text("The CO2 emissions in the world is roughly 4.5 tons per person per year in 2019. Data from worldbank.org")
-                }
+                Text("Daily Consume \(viewModel.resultDailyKg)")
             }
             
             Section {
             Button(action: {
                 viewRouter.currentPage = Page.visualize
             }) {
-                Text("Visualize CO2 footprint in AR")
+                Text("Call to action")
             }
         }
       
