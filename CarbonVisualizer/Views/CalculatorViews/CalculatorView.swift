@@ -117,7 +117,7 @@ struct CalculatorView: View {
             Section(){
                 HStack{
                     Text("Car Count")
-                    TextField(viewModel.propaneVal, text: $viewModel.propaneVal).keyboardType(.numberPad).onTapGesture {
+                    TextField(viewModel.carCount, text: $viewModel.carCount).keyboardType(.numberPad).onTapGesture {
                         self.hideKeyboard()
                      }.multilineTextAlignment(.center)
                     Text("Car Unit")
@@ -132,7 +132,7 @@ struct CalculatorView: View {
                 }
                 HStack{
                     Text("Miles driven")
-                    TextField(viewModel.propaneVal, text: $viewModel.propaneVal).keyboardType(.decimalPad).onTapGesture {
+                    TextField(viewModel.carMiles, text: $viewModel.carMiles).keyboardType(.decimalPad).onTapGesture {
                         self.hideKeyboard()
                      }.multilineTextAlignment(.center)
                     Text("Miles Unit")
@@ -147,7 +147,7 @@ struct CalculatorView: View {
                 }
                 HStack{
                     Text("gas mileage")
-                    TextField(viewModel.propaneVal, text: $viewModel.propaneVal).keyboardType(.decimalPad).onTapGesture {
+                    TextField(viewModel.carMilage, text: $viewModel.carMilage).keyboardType(.decimalPad).onTapGesture {
                         self.hideKeyboard()
                      }.multilineTextAlignment(.center)
                     Text("Mileage Unit")

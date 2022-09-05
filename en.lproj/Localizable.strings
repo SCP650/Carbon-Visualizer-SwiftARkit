@@ -30,10 +30,10 @@
 "Car Unit" = "Vehicles";
 "Explan Car" = "How many vehicles does your household have?";
 "Miles driven" = "Avg Miles Driven";
-"Explan Miles" = "How many miles on average you drive on each car each year? 240 miles/week (12,480 miles/year) is about average in the United States, per vehicle.";
-"Miles Unit" = "mi./year";
+"Explan Miles" = "How many miles on average you drive on each car each year? 240 miles/week is about average in the United States, per vehicle.";
+"Miles Unit" = "mi./week";
 "gas mileage" = "Avg Gas Mileage";
-"Mileage Unit" = "mi./gal";
+"Mileage Unit" = "mpg";
 "Explan Mileage" = "If you don't know your car's fuel economy, you can look it up at www.fueleconomy.gov. The U.S. average is 21.4 miles per gallon.";
 
 

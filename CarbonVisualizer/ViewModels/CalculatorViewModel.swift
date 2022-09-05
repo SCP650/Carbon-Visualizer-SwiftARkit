@@ -21,12 +21,24 @@ class CalculatorViewModel: ObservableObject {
     @Published var propaneVal : String = "37.0"{didSet{CalcCarbon()}}
     @Published var propaneUnit : propaneUnits = propaneUnits.dollars{didSet{CalcCarbon()}}
     
+    @Published var carCount : String = "1"{didSet{CalcCarbon()}}
+    @Published var carMiles : String = "240" {didSet{CalcCarbon()}}
+    @Published var carMilage : String = "21.4" {didSet{CalcCarbon()}}
+    
     @Published var result : String = "123"
     
     public func CalcCarbon(){
         var resultF : Float = 0.0
-        resultF = calcNaturalGas() + calcElectricity() + calcFuel() + calcPropane()
+        resultF = (calcNaturalGas() + calcElectricity() + calcFuel() + calcPropane() + calcCars()) * 0.453592 //convert from lb to kg
         result = String(round(resultF * 100) / 100.0)
+    }
+    
+    private func calcCars() -> Float{
+        if let carCountInt = Float(carCount), var milesF = Float(carMiles), let milageF = Float(carMilage){
+            milesF = milesF * 52 //miles per week -> miles per year
+            return (carCountInt*milesF)/milageF*19.6//lbs CO2/gallon
+        }
+        return 0.0
     }
     
     private func calcNaturalGas() -> Float{
@@ -44,7 +56,7 @@ class CalculatorViewModel: ObservableObject {
             if(elecUnit == electricUnits.dollars){
                 elecValF = elecValF/0.1188
             }
-            return elecValF*1238.516*12
+            return elecValF*1.238*12
         }
         return 0.0
     }
