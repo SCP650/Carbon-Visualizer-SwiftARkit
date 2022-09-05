@@ -39,7 +39,7 @@ struct CalculatorView: View {
                          Text("Explan Natural Gas")
                              .font(.headline)
                              .padding()
-                         Text("Natural Gas Assumption")
+                         Text("Natural Gas Assumption").padding()
                      }
                }
                //Electricity
@@ -59,7 +59,7 @@ struct CalculatorView: View {
                          Text("Explan Electricity")
                              .font(.headline)
                              .padding()
-                         Text("Electricity Assumption")
+                         Text("Electricity Assumption").padding()
                      }
                }
                //Fuel Oil
@@ -79,7 +79,7 @@ struct CalculatorView: View {
                          Text("Explan Fuel Oil")
                              .font(.headline)
                              .padding()
-                         Text("Fuel Oil Assumption")
+                         Text("Fuel Oil Assumption").padding()
                      }
                }
                //Propane
@@ -92,14 +92,14 @@ struct CalculatorView: View {
                        Text(propaneUnits.dollars.rawValue).tag(propaneUnits.dollars)
                        Text(propaneUnits.gallon.rawValue).tag(propaneUnits.gallon)
                    }.pickerStyle(.menu)
-                   Button(action: {showingFuelPopover = true}) {
+                   Button(action: {showingPropanePopover = true}) {
                        Image(systemName: "info.circle")
                      }
-                     .popover(isPresented: $showingFuelPopover) {
+                     .popover(isPresented: $showingPropanePopover) {
                          Text("Explan Propane")
                              .font(.headline)
                              .padding()
-                         Text("Propane Assumption")
+                         Text("Propane Assumption").padding()
                      }
                }
            } header : {
@@ -110,7 +110,7 @@ struct CalculatorView: View {
            }
             
             Section(){
-                Text("1924234")
+                Text(viewModel.result)
             }header: {
                 Text("Annual CO2 emissions")
             } footer:{
@@ -125,6 +125,8 @@ struct CalculatorView: View {
             }
         }
       
+        }.onAppear(){
+            viewModel.CalcCarbon()
         }
     }
 }
