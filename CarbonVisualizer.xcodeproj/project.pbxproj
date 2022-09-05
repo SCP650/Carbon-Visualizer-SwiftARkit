@@ -19,6 +19,7 @@
 		6FC83AFF28C4664600ACCC8A /* LearnMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC83AFE28C4664600ACCC8A /* LearnMoreView.swift */; };
 		6FDAF4F028C50B15003D73D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FDAF4F228C50B15003D73D4 /* Localizable.strings */; };
 		6FDAF4F928C51D93003D73D4 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDAF4F828C51D93003D73D4 /* CalculatorViewModel.swift */; };
+		6FDAF4FC28C66085003D73D4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDAF4FB28C66085003D73D4 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		6FDAF4F428C50B18003D73D4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6FDAF4F528C50B19003D73D4 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6FDAF4F828C51D93003D73D4 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		6FDAF4FB28C66085003D73D4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,11 +93,11 @@
 		6FC83AF328C45B5F00ACCC8A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6FDAF4FA28C66022003D73D4 /* HomeViews */,
 				6FDAF4F628C50F94003D73D4 /* CalculatorViews */,
 				6F24EE1A28C3024C0018E59B /* ContentView.swift */,
 				6FC83AF428C45B7D00ACCC8A /* ARCustomView.swift */,
 				6FC83AF628C4601100ACCC8A /* VisualizerView.swift */,
-				6FC83AF828C4613300ACCC8A /* HomeView.swift */,
 				6FC83AFE28C4664600ACCC8A /* LearnMoreView.swift */,
 			);
 			path = Views;
@@ -115,6 +117,15 @@
 				6FDAF4F828C51D93003D73D4 /* CalculatorViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6FDAF4FA28C66022003D73D4 /* HomeViews */ = {
+			isa = PBXGroup;
+			children = (
+				6FC83AF828C4613300ACCC8A /* HomeView.swift */,
+				6FDAF4FB28C66085003D73D4 /* CardView.swift */,
+			);
+			path = HomeViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FC83AF728C4601100ACCC8A /* VisualizerView.swift in Sources */,
+				6FDAF4FC28C66085003D73D4 /* CardView.swift in Sources */,
 				6F24EE1B28C3024C0018E59B /* ContentView.swift in Sources */,
 				6FDAF4F928C51D93003D73D4 /* CalculatorViewModel.swift in Sources */,
 				6FC83AFF28C4664600ACCC8A /* LearnMoreView.swift in Sources */,
