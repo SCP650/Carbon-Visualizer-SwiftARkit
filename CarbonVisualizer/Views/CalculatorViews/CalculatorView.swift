@@ -186,6 +186,7 @@ struct CalculatorView: View {
                     Spacer()
                     Text(viewModel.wasteVal).foregroundColor(Color(UIColor.placeholderText))
                     Spacer()
+                    Text("lb")
                     Button(action: {showingWastePopover = true}) {
                         Image(systemName: "info.circle")
                     }
@@ -195,12 +196,15 @@ struct CalculatorView: View {
                               .padding()
                       }
                 }
+            } header:{
+                Text("waste")
             }
-            
+        
             Section(){
                 HStack{
-                    Text(viewModel.result)
-                    Text("tons")
+                    Spacer()
+                    Text(viewModel.result).bold()
+                    Text("tons").bold()
                     Spacer()
                     Button(action: {showingResultPopover = true}) {
                         Image(systemName: "info.circle")
