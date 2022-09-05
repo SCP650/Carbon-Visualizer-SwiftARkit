@@ -14,6 +14,11 @@ struct CalculatorView: View {
     @State private var showingElectricPopover = false
     @State private var showingFuelPopover = false
     @State private var showingPropanePopover = false
+    @State private var showingCarPopover = false
+    @State private var showingMilesPopover = false
+    @State private var showingMileagePopover = false
+    @State private var showingWastePopover = false
+    
     
     func hideKeyboard() {
           UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -108,6 +113,56 @@ struct CalculatorView: View {
             footer : {
                Text("Explain Home Energy")
            }
+            
+            Section(){
+                HStack{
+                    Text("Car Count")
+                    TextField(viewModel.propaneVal, text: $viewModel.propaneVal).keyboardType(.numberPad).onTapGesture {
+                        self.hideKeyboard()
+                     }.multilineTextAlignment(.center)
+                    Text("Car Unit")
+                    Button(action: {showingCarPopover = true}) {
+                        Image(systemName: "info.circle")
+                      }
+                      .popover(isPresented: $showingCarPopover) {
+                          Text("Explan Car")
+                              .font(.headline)
+                              .padding()
+                      }
+                }
+                HStack{
+                    Text("Miles driven")
+                    TextField(viewModel.propaneVal, text: $viewModel.propaneVal).keyboardType(.decimalPad).onTapGesture {
+                        self.hideKeyboard()
+                     }.multilineTextAlignment(.center)
+                    Text("Miles Unit")
+                    Button(action: {showingMilesPopover = true}) {
+                        Image(systemName: "info.circle")
+                      }
+                      .popover(isPresented: $showingMilesPopover) {
+                          Text("Explan Miles")
+                              .font(.headline)
+                              .padding()
+                      }
+                }
+                HStack{
+                    Text("gas mileage")
+                    TextField(viewModel.propaneVal, text: $viewModel.propaneVal).keyboardType(.decimalPad).onTapGesture {
+                        self.hideKeyboard()
+                     }.multilineTextAlignment(.center)
+                    Text("Mileage Unit")
+                    Button(action: {showingMileagePopover = true}) {
+                        Image(systemName: "info.circle")
+                      }
+                      .popover(isPresented: $showingMileagePopover) {
+                          Text("Explan Mileage")
+                              .font(.headline)
+                              .padding()
+                      }
+                }
+            } header : {
+                Text("Transportation")
+            }
             
             Section(){
                 Text(viewModel.result)

@@ -25,8 +25,16 @@
 "Explan Propane" = "$37/month is about average in the United States for a household of one person.";
 "Propane Assumption" = "If you enter your monthly propane use in gallons, you'll get a more accurate estimate. If you enter dollars, our calculations assume that you pay $2.47/gallon.";
 
-
-
+"Transportation" = "Transportation";
+"Car Count" = "Count";
+"Car Unit" = "Vehicles";
+"Explan Car" = "How many vehicles does your household have?";
+"Miles driven" = "Avg Miles Driven";
+"Explan Miles" = "How many miles on average you drive on each car each year? 240 miles/week (12,480 miles/year) is about average in the United States, per vehicle.";
+"Miles Unit" = "mi./year";
+"gas mileage" = "Avg Gas Mileage";
+"Mileage Unit" = "mi./gal";
+"Explan Mileage" = "If you don't know your car's fuel economy, you can look it up at www.fueleconomy.gov. The U.S. average is 21.4 miles per gallon.";
 
 
 
