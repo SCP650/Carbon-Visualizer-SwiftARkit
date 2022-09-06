@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct CalcCardView: View {
+struct ARCardView: View {
     @ObservedObject var viewModel : CalculatorViewModel
     var body: some View {
         //First button
-        NavigationLink( destination: CalculatorView(viewModel: viewModel)){
+        NavigationLink( destination: IntroToARView(viewModel: viewModel)){
                VStack{
                    Spacer()
-               Text("Calculate Your Carbon Footprint")
+               Text("Visulize In AR")
                        .fontWeight(.bold)
                        .foregroundColor(Color(UIColor.label))
                        .multilineTextAlignment(.leading)
@@ -34,8 +34,8 @@ struct CalcCardView: View {
     }
 }
 
-struct Previews_CalcCardView_Previews: PreviewProvider {
+struct Previews_ARCardView_Previews: PreviewProvider {
     static var previews: some View {
-        CalcCardView(viewModel: CalculatorViewModel())
+        ARCardView(viewModel: CalculatorViewModel())
     }
 }

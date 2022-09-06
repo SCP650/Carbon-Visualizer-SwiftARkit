@@ -10,16 +10,17 @@ import SwiftUI
 
 struct ContentView : View {
     @EnvironmentObject var viewRouter: ViewRouter
-    
+
     var body: some View {
-        switch viewRouter.currentPage{
-        case .home:
-            HomeView()
-        case .visualize:
-            VisualizerView()
-        case .calculate:
-            CalculatorView().environmentObject(viewRouter)
-        }
+        HomeView()
+//        switch viewRouter.currentPage{
+//        case .home:
+//            HomeView()
+//        case .visualize:
+//            IntroToARView(viewModel: viewModel)
+//        case .calculate:
+//            CalculatorView(viewModel: viewModel).environmentObject(viewRouter)
+//        }
     }
 }
 

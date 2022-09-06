@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CalculatorView: View {
-    @ObservedObject var viewModel = CalculatorViewModel()
+    @ObservedObject var viewModel : CalculatorViewModel
     @EnvironmentObject var viewRouter: ViewRouter
     @State private var showingGasPopover = false
     @State private var showingElectricPopover = false
@@ -221,12 +221,12 @@ struct CalculatorView: View {
             }
             
             Section {
-            Button(action: {
-                viewRouter.currentPage = Page.visualize
-            }) {
-                Text("Call to action")
-            }
-        }
+                Button( action: {}, label: {
+                    Text("Call to action")
+            })
+            }.background( NavigationLink(destination: IntroToARView(viewModel: viewModel)){
+                EmptyView()
+            } )
       
         }.onAppear(){
             viewModel.CalcCarbon()
@@ -236,6 +236,6 @@ struct CalculatorView: View {
 
 struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorView()
+        CalculatorView(viewModel: CalculatorViewModel())
     }
 }

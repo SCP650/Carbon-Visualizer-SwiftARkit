@@ -20,6 +20,8 @@
 		6FDAF4F028C50B15003D73D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FDAF4F228C50B15003D73D4 /* Localizable.strings */; };
 		6FDAF4F928C51D93003D73D4 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDAF4F828C51D93003D73D4 /* CalculatorViewModel.swift */; };
 		6FDAF4FC28C66085003D73D4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDAF4FB28C66085003D73D4 /* CardView.swift */; };
+		6FDAF50028C7055E003D73D4 /* IntroToARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDAF4FF28C7055E003D73D4 /* IntroToARView.swift */; };
+		6FDAF50228C7075F003D73D4 /* ARCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDAF50128C7075F003D73D4 /* ARCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		6FDAF4F528C50B19003D73D4 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6FDAF4F828C51D93003D73D4 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		6FDAF4FB28C66085003D73D4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		6FDAF4FF28C7055E003D73D4 /* IntroToARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroToARView.swift; sourceTree = "<group>"; };
+		6FDAF50128C7075F003D73D4 /* ARCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,11 +97,10 @@
 		6FC83AF328C45B5F00ACCC8A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6FDAF4FD28C70515003D73D4 /* VisualizerViews */,
 				6FDAF4FA28C66022003D73D4 /* HomeViews */,
 				6FDAF4F628C50F94003D73D4 /* CalculatorViews */,
 				6F24EE1A28C3024C0018E59B /* ContentView.swift */,
-				6FC83AF428C45B7D00ACCC8A /* ARCustomView.swift */,
-				6FC83AF628C4601100ACCC8A /* VisualizerView.swift */,
 				6FC83AFE28C4664600ACCC8A /* LearnMoreView.swift */,
 			);
 			path = Views;
@@ -124,8 +127,19 @@
 			children = (
 				6FC83AF828C4613300ACCC8A /* HomeView.swift */,
 				6FDAF4FB28C66085003D73D4 /* CardView.swift */,
+				6FDAF50128C7075F003D73D4 /* ARCardView.swift */,
 			);
 			path = HomeViews;
+			sourceTree = "<group>";
+		};
+		6FDAF4FD28C70515003D73D4 /* VisualizerViews */ = {
+			isa = PBXGroup;
+			children = (
+				6FC83AF428C45B7D00ACCC8A /* ARCustomView.swift */,
+				6FC83AF628C4601100ACCC8A /* VisualizerView.swift */,
+				6FDAF4FF28C7055E003D73D4 /* IntroToARView.swift */,
+			);
+			path = VisualizerViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +227,8 @@
 				6F24EE1B28C3024C0018E59B /* ContentView.swift in Sources */,
 				6FDAF4F928C51D93003D73D4 /* CalculatorViewModel.swift in Sources */,
 				6FC83AFF28C4664600ACCC8A /* LearnMoreView.swift in Sources */,
+				6FDAF50028C7055E003D73D4 /* IntroToARView.swift in Sources */,
+				6FDAF50228C7075F003D73D4 /* ARCardView.swift in Sources */,
 				6F24EE1928C3024C0018E59B /* AppDelegate.swift in Sources */,
 				6FC83AF928C4613300ACCC8A /* HomeView.swift in Sources */,
 				6FC83AFB28C4615200ACCC8A /* CalculatorView.swift in Sources */,
