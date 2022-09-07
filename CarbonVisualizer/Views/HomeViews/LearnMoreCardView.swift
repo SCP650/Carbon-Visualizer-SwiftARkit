@@ -1,24 +1,23 @@
 //
-//  CardView.swift
+//  LearnMoreCardView.swift
 //  CarbonVisualizer
 //
-//  Created by Atlas on 9/5/22.
+//  Created by Atlas on 9/6/22.
 //
 
 import SwiftUI
 
-struct ARCardView: View {
-    @ObservedObject var viewModel : CalculatorViewModel
+struct LearnMoreCardView: View {
     private func calcxOffSet(inputX:CGFloat) -> CGFloat{
         let res = -1*inputX/10 + 7
         return min(max(res,-10),10)
     }
     var body: some View {
         //First button
-        NavigationLink( destination: IntroToARView(viewModel: viewModel)){
+        NavigationLink( destination: LearnMoreView()){
                VStack{
                    Spacer()
-               Text("Visulize Your Emission In AR")
+               Text("Learn More")
                        .font(.title2)
                        .fontWeight(.bold)
                        .foregroundColor(Color(UIColor.label))
@@ -26,7 +25,7 @@ struct ARCardView: View {
                        .frame(width: 200, height:60, alignment: .leading )
                    Spacer()
                    GeometryReader { geometry in
-               Image("cold-earf")
+               Image("Earf")
                    .resizable()
                    .scaledToFit()
                    .padding()
@@ -46,8 +45,8 @@ struct ARCardView: View {
     }
 }
 
-struct Previews_ARCardView_Previews: PreviewProvider {
+struct LearnMoreCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ARCardView(viewModel: CalculatorViewModel())
+        LearnMoreCardView()
     }
 }

@@ -16,22 +16,24 @@ struct HomeView: View {
                 HStack(spacing:25){
                    
                     GeometryReader{ geometry in
-                        CalcCardView(viewModel: viewModel).rotation3DEffect(Angle(degrees: (Double(geometry.frame(in: .global).minX) - 40)/20), axis: (x: 0, y: 10, z: 0))
+                        CalcCardView(viewModel: viewModel)
+                            .rotation3DEffect(Angle(degrees: (Double(geometry.frame(in: .global).minX) - 40)/20), axis: (x: 0, y: 10, z: 0))
                     }.frame(width: 250, height: 500)
                     
        
                     GeometryReader{ geometry in
-                        CalcCardView(viewModel:viewModel).rotation3DEffect(Angle(degrees: (Double(geometry.frame(in: .global).minX) - 40)/20), axis: (x: 0, y: 10, z: 0))
+                        ARCardView(viewModel:viewModel).rotation3DEffect(Angle(degrees: (Double(geometry.frame(in: .global).minX) - 40)/20), axis: (x: 0, y: 10, z: 0))
                     }.frame(width: 250, height: 500)
                     
      
                     GeometryReader{ geometry in
-                        CalcCardView(viewModel:viewModel).rotation3DEffect(Angle(degrees: (Double(geometry.frame(in: .global).minX) - 40)/20), axis: (x: 0, y: 10, z: 0))
+                        LearnMoreCardView().rotation3DEffect(Angle(degrees: (Double(geometry.frame(in: .global).minX) - 40)/20), axis: (x: 0, y: 10, z: 0))
                     }.frame(width: 250, height: 500)
                     Spacer()
                 }
                 
             }.navigationBarTitle("Carbon").frame(width: UIScreen.main.bounds.width, height: 700)
+            Text("Made by Sebastian Yang").font(.footnote).frame(alignment: .center)
         }
     }
 }

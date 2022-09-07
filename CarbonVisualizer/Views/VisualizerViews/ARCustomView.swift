@@ -27,7 +27,7 @@ struct ARViewContainer: UIViewRepresentable {
     
     func updateUIView(_ uiView: CustomARView, context: Context) {
         if(self.triggerObject){
-            let anchorEntity = AnchorEntity(plane: .horizontal)
+            let anchorEntity = AnchorEntity()//plane: .horizontal)
             let volumn = kgOfCo2 / 1.836 //volumns in cube meters
             var directionIndex = 0//index directions
             var preModelEntity : ModelEntity? = nil
@@ -102,7 +102,7 @@ class CustomARView:ARView{
     }
     
     public func HideFocusEntity(){
-        self.focusEntity?.destroy()
+        //self.focusEntity?.destroy()
     }
     
     @objc required dynamic init?(coder decoder: NSCoder) {

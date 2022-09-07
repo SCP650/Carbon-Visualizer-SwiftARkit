@@ -22,6 +22,7 @@
 		6FDAF4FC28C66085003D73D4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDAF4FB28C66085003D73D4 /* CardView.swift */; };
 		6FDAF50028C7055E003D73D4 /* IntroToARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDAF4FF28C7055E003D73D4 /* IntroToARView.swift */; };
 		6FDAF50228C7075F003D73D4 /* ARCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDAF50128C7075F003D73D4 /* ARCardView.swift */; };
+		6FDAF50428C83156003D73D4 /* LearnMoreCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDAF50328C83152003D73D4 /* LearnMoreCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		6FDAF4FB28C66085003D73D4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		6FDAF4FF28C7055E003D73D4 /* IntroToARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroToARView.swift; sourceTree = "<group>"; };
 		6FDAF50128C7075F003D73D4 /* ARCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCardView.swift; sourceTree = "<group>"; };
+		6FDAF50328C83152003D73D4 /* LearnMoreCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				6FC83AF828C4613300ACCC8A /* HomeView.swift */,
 				6FDAF4FB28C66085003D73D4 /* CardView.swift */,
 				6FDAF50128C7075F003D73D4 /* ARCardView.swift */,
+				6FDAF50328C83152003D73D4 /* LearnMoreCardView.swift */,
 			);
 			path = HomeViews;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				6FDAF50028C7055E003D73D4 /* IntroToARView.swift in Sources */,
 				6FDAF50228C7075F003D73D4 /* ARCardView.swift in Sources */,
 				6F24EE1928C3024C0018E59B /* AppDelegate.swift in Sources */,
+				6FDAF50428C83156003D73D4 /* LearnMoreCardView.swift in Sources */,
 				6FC83AF928C4613300ACCC8A /* HomeView.swift in Sources */,
 				6FC83AFB28C4615200ACCC8A /* CalculatorView.swift in Sources */,
 				6FC83AF528C45B7D00ACCC8A /* ARCustomView.swift in Sources */,
