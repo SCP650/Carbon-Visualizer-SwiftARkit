@@ -46,6 +46,7 @@
 "waste unit" = "Calculated Average Waste Emissions";
 "Explan Waste" = "692 pounds of CO2 equivalent per year is about average for a household of 1 person. Your waste-related emissions are calculated based on the number of people in your household.";
 
-"Explan Result" = "In 2019, the CO2 emissions... \n \n -  In U.S., roughly 15 tons per person per year.\n - In China, roughly 7.6 tons per person per year. \n - In the world, roughly 4.5 tons per person per year. \n\nData from worldbank.org";
+"Explan Result" = "For reference, in 2019, the CO2 emissions... \n \n -  In U.S., roughly 15 tons per person per year.\n - In China, roughly 7.6 tons per person per year. \n - In the world, roughly 4.5 tons per person per year. \n\nData from worldbank.org";
+"Explan Daily Result" = "For reference, in 2019, the CO2 emissions... \n \n -  In U.S., roughly 41 kg (90 lb) per person per day.\n - In China, roughly 21 kg (46 lb) per person per day. \n - In the world, roughly 12 kg (26 lb) per person per day. \n\nData from worldbank.org";
 "Daily Consume %@" = "This means every day you are emitting roughly %@ kg of CO2";
 "Call to action" = "See your daily CO2 footprint in AR!";
