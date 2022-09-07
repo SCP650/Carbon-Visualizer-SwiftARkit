@@ -16,7 +16,7 @@ struct ARViewContainer: UIViewRepresentable {
     @Binding var kgOfCo2: Float
     let boxResource = MeshResource.generateBox(size: 1)
     let myMaterial = SimpleMaterial(color: SimpleMaterial.Color(_colorLiteralRed: 255, green: 249, blue: 166, alpha: 0.7), roughness: 0.5, isMetallic: false)
-    let directions = [SIMD3(Float(1),-2,0),SIMD3(Float(-1),-2,0),SIMD3(Float(0),-2,1.0)];
+    let directions = [SIMD3(Float(1),-2,0),SIMD3(Float(-1),-2,0),SIMD3(Float(0),-2,-1.0)];
     //move left, move right, move forward
     
     func makeUIView(context: Context) -> CustomARView {

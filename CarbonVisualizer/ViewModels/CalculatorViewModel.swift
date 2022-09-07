@@ -29,7 +29,7 @@ class CalculatorViewModel: ObservableObject {
     @Published var wasteVal : String = "692"
     
     @Published var result : String = "123"
-    @Published var resultDailyKg : String = "321"
+    @Published var resultDailyKg : String = "41"
     
     public func CalcCarbon(){
         var resultF = (calcNaturalGas() + calcElectricity() + calcFuel() + calcPropane() + calcCars() + calcWaste()) * 0.000453592 //convert from lb to ton

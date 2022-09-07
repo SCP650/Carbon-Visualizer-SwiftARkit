@@ -11,13 +11,16 @@ struct VisualizerView: View {
     @State private var placeObject = false
     @State public var kgOfCo2 : Float = 24.48
     var body: some View {
-        VStack{ ARViewContainer(triggerObject:self.$placeObject, kgOfCo2: self.$kgOfCo2).edgesIgnoringSafeArea(.all)
-            HStack{
+        ZStack(alignment: .bottom){ ARViewContainer(triggerObject:self.$placeObject, kgOfCo2: self.$kgOfCo2).edgesIgnoringSafeArea(.all)
+            VStack{
                 Button(placeObject ? "Reset":"Visualize"){
                     placeObject = !placeObject
-                }
-                TextField("Kg of Co2", value: self.$kgOfCo2, formatter: NumberFormatter())
-            }
+                }.padding()
+                    .background(Color(UIColor.tintColor))
+                    .foregroundColor(.white)
+                    .clipShape(Capsule())
+                Text("Visualizing \(kgOfCo2) kg of CO2").frame(alignment:.center)
+            }.padding()
         }
     }
 }
