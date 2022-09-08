@@ -9,7 +9,12 @@ import SwiftUI
 
 struct LearnMoreView: View {
     var body: some View {
-        Text(LocalizedStringKey("test"))
+        ScrollView(.vertical){
+            VStack{
+                Text("Learn More Text").padding()
+                Text("")
+            }
+        }
     }
 }
 

@@ -12,6 +12,7 @@ struct HomeView: View {
     let viewModel = CalculatorViewModel()
     var body: some View {
         NavigationView{
+            VStack{
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing:25){
                    
@@ -32,8 +33,10 @@ struct HomeView: View {
                     Spacer()
                 }
                 
+            }
+                Text("Made by Sebastian Yang").font(.footnote).frame(alignment: .center).foregroundColor(Color(UIColor.placeholderText)).padding()
+                
             }.navigationBarTitle("Carbon").frame(width: UIScreen.main.bounds.width, height: 700)
-            Text("Made by Sebastian Yang").font(.footnote).frame(alignment: .center)
         }
     }
 }

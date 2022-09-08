@@ -10,7 +10,7 @@ import SwiftUI
 struct CalcCardView: View {
     @ObservedObject var viewModel : CalculatorViewModel
     private func calcxOffSet(inputX:CGFloat) -> CGFloat{
-        let res = -1*inputX/10 + 7
+        let res = -1*inputX/10 + 3
         return min(max(res,-10),10)
     }
     var body: some View {
