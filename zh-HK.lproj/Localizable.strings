@@ -1,8 +1,67 @@
-/* 
+/*
   Localizable.strings
   CarbonVisualizer
 
   Created by Atlas on 9/4/22.
   
 */
-"test" = "這是本地化測試，我在計算機裡~~";
+
+"Title" = "Arbon";
+"Calculate Your Carbon Footprint"="計算你的碳排放";
+"Visulize Your Emission In AR"= "在AR中可视化你的排放";
+"Learn More" = "了解更多";
+
+"Home Energy"="家庭能源";
+
+"Natural Gas" = "天然氣";
+"Explain Home Energy" = "請輸入您家庭的平均每月賬單";
+"Explan Natural Gas" = "23美元/月是美國一個人家庭的平均價格";
+"Natural Gas Assumption" = "如果你以千立方英尺為單位輸入你的月消耗量，你會得到一個更準確的估計。如果你輸入美元，我們的計算假設你支付10.68美元/千立方英尺。";
+
+"Electricity" = "用電  ";
+"Explan Electricity" = "44美元/月是美國一個人家庭的平均水平。";
+"Electricity Assumption" = "如果你輸入你的平均千瓦時，你會得到一個更準確的估計。如果你輸入美元，我們的計算假設你支付11.9美分/千瓦時。";
+
+"Fuel Oil" = "燃料油      ";
+"Explan Fuel Oil" = "72美元/月是美國一個人家庭的平均水平";
+"Fuel Oil Assumption" = "如果你輸入你每月平均燃料油使用加侖數，你會得到一個更準確的估計。如果輸入美元，我們的計算假設你每加侖支付4.02美元。";
+
+"Propane" = "丙烷     ";
+"Explan Propane" = "37美元/月是美國一個人家庭的平均價格。";
+"Propane Assumption" = "如果你輸入每月丙烷使用量的加侖數，你會得到一個更準確的估計。如果你輸入美元，我們的計算假設你每加侖支付2.47美元。";
+
+"Transportation" = "交通";
+"Explain Transportation" = "請輸入您的家庭平均汽車使用量";
+"Car Count" = "數量";
+"Car Unit" = "輛車";
+"Explan Car" = "你家有多少輛車?”平均每個美國家庭擁有1.88輛汽車。";
+"Miles driven" = "平均行駛里程";
+"Explan Miles" = "每輛車平均每年行駛多少英里?”在美國，每輛車平均每周行駛240英里。";
+"Miles Unit" = "英里/週";
+"gas mileage" = "平均汽油里程";
+"Mileage Unit" = "mpg";
+"Explan Mileage" = "如果你不知道你的車的燃油經濟性，你可以在www.fueleconomy.gov上查一下。美國的平均水平是每加侖21.4英里。";
+
+"peep size" = "家庭規模";
+"peep count" = "你家有幾口人?";
+"peep unit" = "人";
+
+"lb" = "磅";
+"waste" = "浪費";
+"waste unit" = "計算平均垃圾排放量";
+"Explan Waste" = "一個人的家庭平均每年消耗692磅二氧化碳當量。你與垃圾有關的排放量是根據你的家庭人數計算的。";
+
+"Explan Result" = "供參考，在各國2019年平均二氧化碳排放量是…\n \n -在美國，每人每年大約15噸。 \n -在中國，每人每年大約7.6噸。 \n -在世界範圍內，每人每年大約4.5噸。 \n\n 數據來源worldbank.org";
+"Explan Daily Result" = "作為參考，2019年，各國二氧化碳排放量是…在美國，每人每天大約41公斤(90磅)。 \n -在中國，每人每天大約21公斤(46磅)。 \n -在世界上，每人每天大約12公斤(26磅)。 \n \n 數據來源worldbank.org";
+"Daily Consume %@" = "這意味著您每天大約排放%@ 千克二氧化碳";
+"Call to action" = "在AR中看看這是多少二氧化碳~";
+
+"Learn More Text" = "感謝您使用這個應用! \n\n 這個應用程序是基於美國環境保護署發布的碳排放計算器。你可以訪問這裡了解所有計算過程、所做的假設、以及如何減少排放:www.epa.gov/carbon-footprint-calculator! \n\n本應用程序的增強現實部分是通過將二氧化碳的重量轉換為體積來創建的。有一天我在瀏覽機票時突然想到了這個主意。我注意到網站顯示了飛行釋放的二氧化碳。然而，我不知道100公斤的碳是什麼意思。然後我突然想到，如果我能在我的客廳裡放100公斤二氧化碳，看看它佔據了多少空間，那將會更直觀。這就是為什麼我做了這個應用程序:)\n\n在底層，這個應用程序是由SwiftUI, ARKit和RealityKit做成。";
+
+"Thousand Cube Feet" = "千立方英尺";
+"Gallons" = "加侖";
+"Your Daily Emission is" = "您每日平均排放";
+"Reset" = "重置";
+"Visualize" = "看看";
+"Dollars" = "$";
+"Unit" = "";

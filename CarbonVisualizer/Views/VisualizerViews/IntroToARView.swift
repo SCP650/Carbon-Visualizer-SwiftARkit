@@ -16,7 +16,7 @@ struct IntroToARView: View {
     var body: some View {
         VStack{
             Spacer()
-            Text("Your Daily Emission is...").font(.title)
+            Text("Your Daily Emission is").font(.title)
             HStack{
             TextField("",
                       text: $viewModel.resultDailyKg

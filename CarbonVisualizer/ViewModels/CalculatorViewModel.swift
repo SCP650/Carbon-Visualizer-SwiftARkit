@@ -97,21 +97,21 @@ class CalculatorViewModel: ObservableObject {
 }
 
 enum gasUnits: String {
-    case dollars = "Dollars"
-    case cubeFeet = "Thousand Cube Feet"
+    case dollars = "$"
+    case cubeFeet = "Thousand Cubic Feet"
 }
 
 enum electricUnits: String {
-    case dollars = "Dollars"
+    case dollars = "$"
     case watt = "kWh"
 }
 
 enum fuelUnits: String {
-    case dollars = "Dollars"
+    case dollars = "$"
     case gallon = "Gallons"
 }
 
 enum propaneUnits: String {
-    case dollars = "Dollars"
+    case dollars = "$"
     case gallon = "Gallons"
 }

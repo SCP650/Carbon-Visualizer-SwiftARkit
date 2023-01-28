@@ -36,7 +36,7 @@ struct HomeView: View {
             }
                 Text("Made by Sebastian Yang").font(.footnote).frame(alignment: .center).foregroundColor(Color(UIColor.placeholderText)).padding()
                 
-            }.navigationBarTitle("Carbon").frame(width: UIScreen.main.bounds.width, height: 700)
+            }.navigationBarTitle("Title").frame(width: UIScreen.main.bounds.width, height: 700)
         }
     }
 }

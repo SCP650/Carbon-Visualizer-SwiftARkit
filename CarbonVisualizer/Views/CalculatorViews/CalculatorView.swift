@@ -50,7 +50,7 @@ struct CalculatorView: View {
                    Picker("Unit", selection: $viewModel.gasUnit) {
                        Text(gasUnits.dollars.rawValue).tag(gasUnits.dollars)
                        Text(gasUnits.cubeFeet.rawValue).tag(gasUnits.cubeFeet)
-                   }.pickerStyle(.menu)
+                   }.pickerStyle(.menu).labelsHidden()
                    Button(action: {showingGasPopover = true}) {
                        Image(systemName: "info.circle")
                      }
@@ -70,7 +70,7 @@ struct CalculatorView: View {
                    Picker("Unit", selection: $viewModel.elecUnit) {
                        Text(electricUnits.dollars.rawValue).tag(electricUnits.dollars)
                        Text(electricUnits.watt.rawValue).tag(electricUnits.watt)
-                   }.pickerStyle(.menu)
+                   }.pickerStyle(.menu).labelsHidden()
                    Button(action: {showingElectricPopover = true}) {
                        Image(systemName: "info.circle")
                      }
@@ -90,7 +90,7 @@ struct CalculatorView: View {
                    Picker("Unit", selection: $viewModel.fuelUnit) {
                        Text(fuelUnits.dollars.rawValue).tag(fuelUnits.dollars)
                        Text(fuelUnits.gallon.rawValue).tag(fuelUnits.gallon)
-                   }.pickerStyle(.menu)
+                   }.pickerStyle(.menu).labelsHidden()
                    Button(action: {showingFuelPopover = true}) {
                        Image(systemName: "info.circle")
                      }
@@ -110,7 +110,7 @@ struct CalculatorView: View {
                    Picker("Unit", selection: $viewModel.propaneUnit) {
                        Text(propaneUnits.dollars.rawValue).tag(propaneUnits.dollars)
                        Text(propaneUnits.gallon.rawValue).tag(propaneUnits.gallon)
-                   }.pickerStyle(.menu)
+                   }.pickerStyle(.menu).labelsHidden()
                    Button(action: {showingPropanePopover = true}) {
                        Image(systemName: "info.circle")
                      }
